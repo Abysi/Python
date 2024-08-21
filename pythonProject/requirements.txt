@@ -1,0 +1,11 @@
+fastapi
+httpx
+sqlalchemy
+asyncpg
+pydantic
+slowapi
+datetime
+typing
+uvicorn
+psycopg2-binary
+python-multipart

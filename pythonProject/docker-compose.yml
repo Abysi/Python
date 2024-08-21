@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: a.rudenko
+      POSTGRES_PASSWORD: 1
+      POSTGRES_DB: a.rudenko
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    command: uvicorn main:app --host 0.0.0.0 --port 80
+    ports:
+      - "80:80"
+    environment:
+      DATABASE_URL: postgresql://a.rudenko:your_password@db:5432/a.rudenko
+    depends_on:
+      - db

@@ -16,6 +16,6 @@ services:
     ports:
       - "80:80"
     environment:
-      DATABASE_URL: postgresql://a.rudenko:your_password@db:5432/a.rudenko
+      DATABASE_URL: postgresql://a.rudenko:1@db:5432/a.rudenko
     depends_on:
       - db
